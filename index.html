@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shoelace Style: Left Side Navigation Bar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.13/dist/shoelace/shoelace.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.13/dist/shoelace/shoelace.esm.js"></script>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+      body{
+      font-family: 'Lato', sans-serif;
+      background-color: #f1f2f6;
+      }
+     ::part(body) {
+      padding: 0;
+      }
+      sl-menu-item::part(base){
+      padding-top: 15px;
+      padding-bottom: 15px;
+      }
+      ::part(header){
+        border-bottom: 1px solid #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <sl-drawer label="W3hubs" placement="left" class="drawer-placement-left">
+      <sl-menu>
+        <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 1
+        </sl-menu-item>
+        <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 2
+        </sl-menu-item>
+        <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 3
+        </sl-menu-item>
+        <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 4
+        </sl-menu-item>
+        <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 5
+        </sl-menu-item>
+        <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 6
+        </sl-menu-item>
+        <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 7
+        </sl-menu-item>
+         <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 8
+        </sl-menu-item>
+         <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 9
+        </sl-menu-item>
+         <sl-menu-item>
+          <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+          Link 10
+        </sl-menu-item>
+      </sl-menu>
+    </sl-drawer>
+    <sl-button>Open Drawer</sl-button>
+    <script>
+      (() => {
+        const drawer = document.querySelector('.drawer-placement-left');
+        const openButton = drawer.nextElementSibling;
+        openButton.addEventListener('click', () => drawer.show());
+      })();
+    </script>
+  </body>
+</html>
